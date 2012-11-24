@@ -46,6 +46,6 @@ function asc_breadcrumbs_preprocess_page($vars) {
 
   isset($type) ? ($breadcrumb[] = l($sections[$type]['name'], $sections[$type]['path'])) : '';
 
-  $breadcrumb[] = l(drupal_get_title(), base_path() . request_uri());
+  $breadcrumb[] = l(drupal_get_title(), request_path());
   drupal_set_breadcrumb($breadcrumb);
 }
