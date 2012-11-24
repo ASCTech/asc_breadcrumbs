@@ -1,0 +1,13 @@
+name = "ASC Breadcrumbs"
+description = "ASC Footer Contact Information and Links"
+core = "7.x"
+package = "ASC"
+version = "7.x.-1.x"
+files[] = asc_breadcrumbs.module
+
+
+; Information added by drush on 2012-11-22
+version = ""
+project = "asc_footer"
+datestamp = "1353600775"
+
