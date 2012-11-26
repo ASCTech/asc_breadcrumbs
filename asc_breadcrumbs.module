@@ -23,29 +23,32 @@
  * Provides a simple user interface that tells the developer where to go.
  */
 function asc_breadcrumbs_preprocess_page($vars) {
-  $breadcrumb[] = l(t('Home'), NULL);
-  $sections = array(
-    'asc_news' => array(
-      'name' => 'News',
-      'path' => 'news',
-    ),
-    'asc_event' => array(
-      'name' => 'Events',
-      'path' => 'events',
-    ),
-    'asc_people' => array(
-      'name' => 'People',
-      'path' => 'directory',
-    ),
-    'asc_blog' => array(
-      'name' => variable_get('asc_blog_name'),
-      'path' => 'blog',
-    ),
-  );
-  $type = (isset($vars['node']->type) ? $vars['node']->type : '');
+  dsm($vars);
+  if (!$vars['is_front']) {
+    $breadcrumb[] = l(t('Home'), NULL);
+    $sections = array(
+      'asc_news' => array(
+        'name' => 'News',
+        'path' => 'news',
+      ),
+      'asc_event' => array(
+        'name' => 'Events',
+        'path' => 'events',
+      ),
+      'asc_people' => array(
+        'name' => 'People',
+        'path' => 'directory',
+      ),
+      'asc_blog' => array(
+        'name' => variable_get('asc_blog_name'),
+        'path' => 'blog',
+      ),
+    );
+    $type = (isset($vars['node']->type) ? $vars['node']->type : '');
 
-  (isset($type) && array_key_exists($type, $sections)) ? ($breadcrumb[] = l($sections[$type]['name'], $sections[$type]['path'])) : '';
+    (isset($type) && array_key_exists($type, $sections)) ? ($breadcrumb[] = l($sections[$type]['name'], $sections[$type]['path'])) : '';
 
-  $breadcrumb[] = l(drupal_get_title(), request_path());
-  drupal_set_breadcrumb($breadcrumb);
+    $breadcrumb[] = l(drupal_get_title(), request_path());
+    drupal_set_breadcrumb($breadcrumb);
+  }
 }
