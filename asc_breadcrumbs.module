@@ -23,7 +23,6 @@
  * Provides a simple user interface that tells the developer where to go.
  */
 function asc_breadcrumbs_preprocess_page($vars) {
-  dsm($vars);
   if (!$vars['is_front']) {
     $breadcrumb[] = l(t('Home'), NULL);
     $sections = array(
