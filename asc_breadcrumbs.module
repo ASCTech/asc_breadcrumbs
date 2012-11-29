@@ -47,7 +47,8 @@ function asc_breadcrumbs_preprocess_page($vars) {
 
     (isset($type) && array_key_exists($type, $sections)) ? ($breadcrumb[] = l($sections[$type]['name'], $sections[$type]['path'])) : '';
 
-    $breadcrumb[] = l(drupal_get_title(), request_path());
+    $noemtitle = preg_replace('/&lt;\/?em&gt;/','',drupal_get_title());
+    $breadcrumb[] = l($noemtitle request_path());
     drupal_set_breadcrumb($breadcrumb);
   }
 }
