@@ -1,1 +1,1 @@
-Breadcrumbs for node types.
+Breadcrumbs for Arts and Sciences node types.

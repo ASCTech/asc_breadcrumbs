@@ -1,26 +1,21 @@
 <?php
 /**
  * @file
- * Module to supply footer icons for ASC Sites.
+ * Module to supply breadcrumbs for ASC Sites.
  */
 
 /**
- * @defgroup asc_footer
- * Module to supple field to add OPIC image.
+ * @defgroup asc_breadcrumbs
+ * Simple module to override breadcrumbs for ASC sites..
  *
- * And finally, our module defines the widet in
- * opic_field_widget_info() and field_example_field_widget_form().
- * The widget is the form element used to receive input from the user
- * when the field is being populated.
- *
- * @see field_types
- * @see field
  */
 
 /**
- * Implements hook_menu().
+ * Implements hook_preprocess_page().
  *
- * Provides a simple user interface that tells the developer where to go.
+ * Create breadcrumbs for our content types and set the trail; otherwise, use
+ * the title as the second trail item.
+ *
  */
 function asc_breadcrumbs_preprocess_page($vars) {
   if (!$vars['is_front']) {
@@ -43,9 +38,12 @@ function asc_breadcrumbs_preprocess_page($vars) {
         'path' => 'blog',
       ),
     );
+
     $type = (isset($vars['node']->type) ? $vars['node']->type : '');
 
-    (isset($type) && array_key_exists($type, $sections)) ? ($breadcrumb[] = l($sections[$type]['name'], $sections[$type]['path'])) : '';
+    if (isset($type) && array_key_exists($type, $sections)) {
+      $breadcrumb[] = l($sections[$type]['name'], $sections[$type]['path']);
+    }
 
     $noemtitle = preg_replace('/<\/?em>/','',drupal_get_title());
     $breadcrumb[] = l($noemtitle, request_path());
