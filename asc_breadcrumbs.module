@@ -19,7 +19,6 @@
  */
 function asc_breadcrumbs_preprocess_page($vars) {
   if (!$vars['is_front']) {
-    $breadcrumb[] = l(t('Home'), NULL);
     $sections = array(
       'asc_news' => array(
         'name' => 'News',
@@ -42,6 +41,7 @@ function asc_breadcrumbs_preprocess_page($vars) {
     $type = (isset($vars['node']->type) ? $vars['node']->type : '');
 
     if (isset($type) && array_key_exists($type, $sections)) {
+      $breadcrumb[] = l(t('Home'), NULL);
       $breadcrumb[] = l($sections[$type]['name'], $sections[$type]['path']);
       $noemtitle = preg_replace('/<\/?em>/', '', drupal_get_title());
       $breadcrumb[] = l($noemtitle, request_path());
