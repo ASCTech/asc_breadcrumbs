@@ -36,6 +36,14 @@ function asc_breadcrumbs_preprocess_page($vars) {
         'name' => variable_get('asc_blog_name'),
         'path' => 'blog',
       ),
+      'asc_blog' => array(
+        'name' => 'Courses',
+        'path' => 'courses',
+      ),
+      'asc_blog' => array(
+        'name' => 'Workshops',
+        'path' => 'workshops',
+      ),
     );
 
     $type = (isset($vars['node']->type) ? $vars['node']->type : '');
