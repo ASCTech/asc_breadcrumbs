@@ -36,13 +36,13 @@ function asc_breadcrumbs_preprocess_page($vars) {
         'name' => variable_get('asc_blog_name'),
         'path' => 'blog',
       ),
-      'asc_blog' => array(
+      'asc_workshop_course' => array(
         'name' => 'Courses',
-        'path' => 'courses',
+        'path' => 'services',
       ),
-      'asc_blog' => array(
+      'asc_workshop' => array(
         'name' => 'Workshops',
-        'path' => 'workshops',
+        'path' => 'upcoming-workshops',
       ),
     );
 
