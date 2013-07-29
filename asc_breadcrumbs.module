@@ -58,7 +58,8 @@ function asc_breadcrumbs_preprocess_page($vars) {
     }
 
     $noemtitle = preg_replace('/<\/?em>/', '', drupal_get_title());
-    $breadcrumb[] = l($noemtitle, request_path());
+    $breadcrumb[] .= l($noemtitle, request_path());
     drupal_set_breadcrumb($breadcrumb);
   }
+  // var_dump($breadcrumb);
 }
