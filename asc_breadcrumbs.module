@@ -49,6 +49,10 @@ function asc_breadcrumbs_preprocess_page($vars) {
         'name' => 'Publications',
        	'path' => 'publications',
       ),
+      'blog' => array(
+        'name' => 'Blog',
+       	'path' => 'blog',
+      ),
     );
 
     $type = (isset($vars['node']->type) ? $vars['node']->type : '');
