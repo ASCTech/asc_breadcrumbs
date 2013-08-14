@@ -34,8 +34,7 @@ function asc_breadcrumbs_preprocess_page($vars) {
         'path' => 'directory',
       ),
       'asc_blog' => array(
-        // 'name' => variable_get('asc_blog_name'),
-        'name' => "Blog 1",
+        'name' => variable_get('asc_blog_name'),
         'path' => 'blog',
       ),
       'asc_workshop_course' => array(
