@@ -55,7 +55,6 @@ function asc_breadcrumbs_preprocess_page($vars) {
       ),
     );
 
-    var_dump($vars['node']->type);
     $type = (isset($vars['node']->type) ? $vars['node']->type : '');
 
     if (isset($type) && array_key_exists($type, $sections)) {
