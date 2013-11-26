@@ -25,6 +25,10 @@ function asc_breadcrumbs_preprocess_page($vars) {
         'name' => 'News',
         'path' => 'news',
       ),
+      'asc_announcement' => array(
+        'name' => 'Announcements',
+        'path' => 'announcements',
+      ),
       'asc_event' => array(
         'name' => 'Events',
         'path' => 'events',
