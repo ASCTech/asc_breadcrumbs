@@ -37,6 +37,10 @@ function asc_breadcrumbs_preprocess_page($vars) {
         'name' => 'Exhibitions',
         'path' => 'exhibitions',
       ),
+      'asc_design' => array(
+        'name' => 'Designs',
+        'path' => 'designs',
+      ),
       'asc_people' => array(
         'name' => 'People',
         'path' => 'directory',
