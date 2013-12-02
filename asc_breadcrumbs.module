@@ -33,6 +33,10 @@ function asc_breadcrumbs_preprocess_page($vars) {
         'name' => 'Events',
         'path' => 'events',
       ),
+      'asc_exhibition' => array(
+        'name' => 'Exhibitions',
+        'path' => 'exhibitions',
+      ),
       'asc_people' => array(
         'name' => 'People',
         'path' => 'directory',
