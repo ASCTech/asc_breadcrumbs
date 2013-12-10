@@ -63,7 +63,11 @@ function asc_breadcrumbs_preprocess_page($vars) {
       ),
       'publications' => array(
         'name' => 'Publications',
-       	'path' => 'publications',
+        'path' => 'publications',
+      ),
+      'product-page' => array(
+        'name' => 'Store',
+        'path' => 'Store',
       ),
     );
 
