@@ -68,6 +68,10 @@ function asc_breadcrumbs_preprocess_page($vars) {
       'product_page' => array(
         'name' => 'Store',
         'path' => 'store',
+      )
+      ,'product_display' => array(
+        'name' => 'Store',
+        'path' => 'store',
       ),
     );
 
