@@ -73,7 +73,7 @@ function asc_breadcrumbs_preprocess_page($vars) {
         'name' => 'Store',
         'path' => 'store',
       ),
-      ,'disseratations' => array(
+      'disseratations' => array(
         'name' => 'Dissertations',
         'path' => 'dissertations',
       ),
