@@ -49,6 +49,10 @@ function asc_breadcrumbs_preprocess_page($vars) {
         'name' => 'Blog',
         'path' => 'blog',
       ),
+      'asc_stories' => array(
+        'name' => 'Stories',
+        'path' => 'stories',
+      ),
       'asc_workshop_course' => array(
         'name' => 'Courses',
         'path' => 'courses',
